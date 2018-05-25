@@ -1,0 +1,273 @@
+// Media query mixins
+@mixin media-tiny
+  @media (max-height: 375px)
+    @content
+
+@mixin media-medium
+  @media (min-width: 500px)
+    @content
+
+@mixin media-tablet
+  @media (min-width: 756px)
+    @content
+
+@mixin media-computer
+  @media (min-width: 1080px)
+    @content
+
+// Variables
+$font-1: 'Mukta Malar', sans-serif
+
+$font-2: 'Hind', sans-serif
+
+$font-display: 'Rubik', sans-serif
+
+$stairs-offset: -5em
+
+$card-margin-computer: 12em auto 15em auto
+
+$dark-grey: #6b6b6b
+
+.font-1
+  font-family: $font-1
+  font-weight: 500
+
+.font-2
+  font-family: $font-2
+  font-weight: 300
+
+.font-display
+  font-family: $font-display
+  font-weight: 500
+
+.white
+  background-color: #FFFFFF
+
+.t-white
+  color: #FFFFFF
+
+.t-black
+  color: black
+
+.dark-red
+  background-color: #7F0000
+
+.t-dark-red
+  color: #7F0000
+
+.medium-red
+  background-color: #b71c1c
+
+.light-grey
+  background-color: #EEEEEE
+
+.t-dark-grey
+  color: $dark-grey
+
+html
+  min-height: 100%
+  position: relative
+
+nav .navbar-brand
+  margin: auto
+  font-size: 2em
+  position: relative
+  top: 0.07em
+  line-height: 0
+
+#navbar-logo
+  max-width: 1em
+  position: relative
+  top: -0.1em
+  left: 0.3em
+
+nav .collapse
+  font-weight: 400
+
+a:hover
+  color: black
+
+.stairs-img
+  z-index: -100
+  display: block
+  width: 110%
+  height: auto
+  position: relative
+  top: 0em
+  left: -30%
+
+  @include media-tablet
+    width: 130%
+    left: -20%
+
+#stairs-2
+  z-index: -101
+  top: $stairs-offset
+
+  @include media-tablet
+    top: -11.5em
+
+  @include media-computer
+    display: none
+
+#stairs-3
+  z-index: -102
+  top: $stairs-offset * 2
+
+  @include media-tablet
+    display: none
+
+#stairs-4
+  z-index: -103
+  top: $stairs-offset * 3
+
+#stairs-5
+  z-index: -104
+  top: $stairs-offset * 4
+
+#stairs-6
+  z-index: -105
+  top: $stairs-offset * 5
+
+#stairs-4, #stairs-5, #stairs-6
+  @include media-medium
+    display: none
+
+.stairs-container
+  position: relative
+  top: 3em
+  height: auto
+  width: auto
+  overflow-x: hidden
+  overflow-y: visible
+
+.display-text h1
+  position: relative
+  z-index: 2
+  text-align: right
+  top: -26em
+  right: 0.5em
+  font-size: 2em
+
+  @include media-medium
+    font-size: 3em
+    top: -12em
+
+  @include media-computer
+    font-size: 4em
+    top: -9em
+
+.btn-down
+  position: fixed
+  z-index: 2
+  right: 2em
+  bottom: 0.5em
+
+.btn-down a
+  font-size: 2em
+
+  @include media-computer
+    font-size: 3em
+
+.btn-down a:hover
+  color: $dark-grey
+
+.typed-cursor
+  display: none
+
+.display-text
+  height: 0
+
+.medium-card
+  padding: 0
+  margin: 4em auto 10em auto
+
+  @include media-medium
+    margin: 0 auto
+
+  @include media-tablet
+    margin: 5em auto 12em auto
+
+  @include media-computer
+    margin: $card-margin-computer
+
+  .card-header a h4
+    margin: 0
+
+#top-card
+  margin: -18em auto 0 auto
+
+  @include media-medium
+    margin: 0 auto
+
+  @include media-tablet
+    margin: 8em auto 0em auto
+
+  @include media-computer
+    margin: $card-margin-computer
+
+.card-header
+  text-align: center
+
+#anchor
+  position: relative
+  top: -23em
+
+  @include media-tablet
+    top: 0
+
+  @include media-computer
+    top: 6em
+
+.display-contact-container
+  position: relative
+  top: 6em
+
+  @include media-tablet
+    top: 7em
+
+  @include media-computer
+    top: 11.5em
+
+.display-contact
+  font-size: 2.5em
+
+  @include media-tablet
+    font-size: 3.5em
+
+.contact-card
+  position: relative
+  top: 4em
+
+  @include media-tablet
+    top: 3em
+
+  @include media-computer
+    top: 0
+
+.footer
+  position: absolute
+  bottom: 0
+  width: 100%
+  font-size: 13px
+  margin: 0
+
+  ul
+    margin: 0
+    padding: 1em 0
+
+    li
+      list-style-type: none
+
+  .copyright-container
+    text-align: right
+
+    span
+      position: relative
+      bottom: 2.5em
+
+      @include media-tablet
+        top: 50%
+
+.invisible
+  display: none
