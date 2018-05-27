@@ -54,6 +54,12 @@ nav .navbar-brand {
 nav .collapse {
   font-weight: 400; }
 
+.dropdown-menu {
+  width: 100%; }
+  @media (min-width: 1080px) {
+    .dropdown-menu {
+      width: 170%; } }
+
 a:hover {
   color: black; }
 
