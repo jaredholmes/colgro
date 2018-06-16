@@ -20,13 +20,13 @@ $font-1: 'Mukta Malar', sans-serif
 
 $font-2: 'Hind', sans-serif
 
-$font-display: 'Rubik', sans-serif
-
 $stairs-offset: -5em
 
 $card-margin-computer: 12em auto 15em auto
 
 $dark-grey: #6b6b6b
+
+$footer-height: 110px
 
 .font-1
   font-family: $font-1
@@ -35,10 +35,6 @@ $dark-grey: #6b6b6b
 .font-2
   font-family: $font-2
   font-weight: 300
-
-.font-display
-  font-family: $font-display
-  font-weight: 500
 
 .white
   background-color: #FFFFFF
@@ -89,6 +85,9 @@ nav .collapse
 
   @include media-computer
     width: 170%
+
+  a
+    font-size: 15px
 
 a:hover
   color: black
@@ -251,6 +250,7 @@ a:hover
 
 .footer
   position: absolute
+  height: $footer-height
   bottom: 0
   width: 100%
   font-size: 13px

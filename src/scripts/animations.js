@@ -6,7 +6,7 @@ sr.reveal(".medium-card", { duration: 300 });
 
 // typed.js
 var options = {
-  strings: ['<h1>Collaborative<br>Growth.</h1>'],
+  strings: ['<h1>Collaborative<br>Growth</h1>'],
   loop: false,
   typeSpeed: 90,
 };
